@@ -10,12 +10,14 @@ export enum MEALDB_Category {
     'Vegetarian' = 'Vegetarian'
 }
 
+// tslint:disable-next-line: class-name
 export interface MEALDB_ListItem {
     strMeal: string;
     strMealThumb: string;
     idMeal: string;
 }
 
+// tslint:disable-next-line: class-name
 export interface MEALDB_Meal {
     idMeal: string;
     strMeal: string;
@@ -23,7 +25,7 @@ export interface MEALDB_Meal {
     strCategory: MEALDB_Category;
     strArea: string;
     strInstructions: string;
-    strMealThumb: string
+    strMealThumb: string;
     strTags: string;
     strYoutube: string;
     strIngredient1: string;

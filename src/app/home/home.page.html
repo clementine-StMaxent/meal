@@ -10,8 +10,11 @@
 
   <ion-grid *ngIf="meals">
     <ion-row>
-      <ion-col size="6" *ngFor="let meal of meals"></ion-col>
-      <ion-img [src]="meal.strMealThumb"></ion-img>
+      <ion-col [routerLink]="'/meal/' + meal.idMeal" size="6" *ngFor="let meal of meals">
+        <ion-img [src]="meal.strMealThumb"></ion-img>
+      </ion-col>
     </ion-row>
   </ion-grid>
+
+
 </ion-content>
