@@ -1,5 +1,6 @@
 import { MealdbApiService } from './../service/mealdb-api.service';
 import { Component } from '@angular/core';
+import { MEALDB_ListItem } from '../model';
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,10 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  meals: MEALDB_ListItem[] | null = null ;
   constructor(private mealdb: MealdbApiService) {
-    this.mealdb.findBuCategory("SeaFood").subscribe(res => console.log(res));
+    this.mealdb.findByCategory('SeaFood')
+    .subscribe(meals => this.meals = meals);
   }
 
 }
